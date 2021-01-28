@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+$red-color: hsl(0, 100%, 74%); 
+$green-color: hsl(154, 59%, 51%);
+$blue-color: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%); 
+$grayish-blue: hsl(246, 25%, 77%);
+
+$font-stack:'Poppins', sans-serif;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: $font-stack;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background: $red-color;
+}
+
+.container {
+    background: url('/css/images/bg-intro-mobile.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 1.5rem; 
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.purple-card {
+    margin-top: 3rem;
+    background: $blue-color;
+    padding: 1rem 4rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    // box-shadow: 0 10px;
+}
+
+form {
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    width: 100%;
+
+    input, button {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        outline: $grayish-blue;
+        opacity: 0.8;
+        font-weight: 700;
+        border: 1px solid $grayish-blue;
+        border-radius: 10px;
+        color: $dark-blue;
+    }
+
+    button {
+        background: $green-color;
+        letter-spacing: 1px;
+        border: none;
+        color: #fff;
+        // box-shadow: 0 10px;
+    }
+
+    small {
+        color: $grayish-blue;
+        font-size: 0.8rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $red-color;
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 1200px) {    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 0 10rem;
+        background: url(/css/images/bg-intro-desktop.png);
+        background-size: cover;
+        height: 100vh;
+    }
+
+    h2, p {
+        text-align: start;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+    form {
+        padding: 2rem;
+    }
+}
